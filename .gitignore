@@ -1,0 +1,11 @@
+# Python virtual environment — machine-specific, recreatable, never committed
+.venv/
+
+# Secrets — never commit these
+.env
+*.pem
+*.key
+
+# OS / editor clutter
+.DS_Store
+Thumbs.db
