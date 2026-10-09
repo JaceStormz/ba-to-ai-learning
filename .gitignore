@@ -9,3 +9,5 @@
 # OS / editor clutter
 .DS_Store
 Thumbs.db
+# Python bytecode cache — regenerated on every run, never committed
+__pycache__/
