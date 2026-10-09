@@ -13,23 +13,22 @@ def get_ids(reqs):
 
 def filter_by_status(reqs, status):
     # Keep only requirements that match the requested status.
-    return [req for req in reqs if req["status"] == status]
+    return [req for req in reqs if req.get("status") == status]
 
 
 def count_by_status(reqs):
-    # Build the counts one requirement at a time.
+    # Count each status and flag requirements missing a status.
     counts = {}
 
     for req in reqs:
-        status = req["status"]
+        status = req.get("status", "missing")
         counts[status] = counts.get(status, 0) + 1
 
     return counts
 
-
 def unique_statuses(reqs):
     # A set comprehension keeps each status only once.
-    return {req["status"] for req in reqs}
+    return {req.get("status", "missing") for req in reqs}
 
 
 if __name__ == "__main__":
