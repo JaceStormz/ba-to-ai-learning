@@ -1,0 +1,6 @@
+[
+    {"id": "REQ-001", "text": "The system shall validate user login.", "status": "approved"},
+    {"id": "REQ-002", "text": "The system shall respond quickly to queries.", "status": "draft"},
+    {"id": "REQ-003", "text": "The system shall log all admin actions.", "status": "approved"},
+    {"id": "REQ-004", "text": "The interface should be user-friendly.", "status": "draft"}
+]
