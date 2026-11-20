@@ -1,9 +1,14 @@
 import json
 from summary import print_summary
 
+
+def load_requirements(path):
+    with open(path, "r") as file:
+        return json.load(file)
+
+
 try:
-    with open("requirements.json", "r") as file:
-        requirements = json.load(file)
+    requirements = load_requirements("requirements.json")
 
 except FileNotFoundError:
     print("The file 'requirements.json' was not found.")
